@@ -19,10 +19,7 @@ for i = 1:num_Im_dir-1 % go over the images
     im1_points = detectSURFFeatures(im1_gray, 'MetricThreshold', 400); im2_points = detectSURFFeatures(im2_gray, 'MetricThreshold', 400);
     % Extract Feature descriptors from the feature points
     im1_features = extractFeatures(im1_gray,im1_points); im2_features = extractFeatures(im2_gray,im2_points);
-    
-    
-    
-    
+   
     % Match Features descriptors between the current image & the next image based on the
     % MaxRatio threshold where more points are matched togeather as this
     % ratio increases from 0 to 1
